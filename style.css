@@ -20,7 +20,7 @@ h1, h2, h3, h4 {
 }
 
 .highlight {
-    color: #00ff88;
+    color:#FFD700;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
     font-weight: 900;
-    color: #00ff88;
+    color: #FFCE00;
 }
 
 .logo i {
@@ -75,7 +75,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-menu a:hover {
-    color: #00ff88;
+    color: #493dec;
     background: rgba(0, 255, 136, 0.1);
 }
 
@@ -120,6 +120,8 @@ h1, h2, h3, h4 {
     color: #aaa;
     max-width: 600px;
     margin-bottom: 2rem;
+    text-align:center;
+    margin-left:170px;
 }
 
 .hero-buttons {
@@ -140,14 +142,14 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #00ff88, #00ccff);
+    background: linear-gradient(45deg,#FFD700, #00ccff);
     color: #000;
 }
 
 .btn-secondary {
     background: transparent;
-    color: #00ff88;
-    border: 2px solid #00ff88;
+    color: #3B82F6;
+    border: 2px solid #3B82F6;
 }
 
 .btn-primary:hover, .btn-secondary:hover {
@@ -167,7 +169,7 @@ h1, h2, h3, h4 {
 
 .stat h3 {
     font-size: 2.5rem;
-    color: #00ff88;
+    color: #3B82F6;
     margin-bottom: 0.5rem;
 }
 
@@ -192,7 +194,7 @@ h1, h2, h3, h4 {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: linear-gradient(to right, transparent, #00ff88, transparent);
+    background: linear-gradient(to right, transparent, #3B82F6, transparent);
 }
 
 .featured-games {
@@ -234,7 +236,7 @@ h1, h2, h3, h4 {
     top: 15px;
     right: 15px;
     background: rgba(0, 0, 0, 0.8);
-    color: #00ff88;
+    color: #3B82F6;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: bold;
@@ -258,7 +260,7 @@ h1, h2, h3, h4 {
 .game-platforms {
     display: flex;
     gap: 10px;
-    color: #00ff88;
+    color: #3B82F6;
 }
 
 /* News Section */
@@ -283,14 +285,14 @@ h1, h2, h3, h4 {
 }
 
 .news-date {
-    color: #00ff88;
+    color: #3B82F6;
     font-size: 0.9rem;
     margin-bottom: 1rem;
     display: block;
 }
 
 .read-more {
-    color: #00ff88;
+    color: #3B82F6;
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
@@ -307,7 +309,7 @@ h1, h2, h3, h4 {
     background: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 10px;
-    border-left: 3px solid #00ff88;
+    border-left: 3px solid #3B82F6;
 }
 
 /* Footer */
@@ -327,7 +329,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-section h3, .footer-section h4 {
-    color: #00ff88;
+    color:  #FFD700;
     margin-bottom: 1rem;
 }
 
