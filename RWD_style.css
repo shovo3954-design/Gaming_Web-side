@@ -1,0 +1,749 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 2px solid #00ff88;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #FFCE00;
+    z-index: 1001;
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.nav-menu a:hover {
+    color: #493dec;
+    background: rgba(0, 255, 136, 0.1);
+}
+
+.login-btn {
+    background: linear-gradient(45deg, #00ff88, #00ccff);
+    color: #000;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    min-width: max-content;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 7rem 1rem 2rem;
+    background: radial-gradient(circle at center, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.9rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s;
+    display: inline-block;
+    font-size: 1rem;
+    min-width: 160px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #FFD700, #00ccff);
+    color: #000;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #3B82F6;
+    border: 2px solid #3B82F6;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.stat {
+    text-align: center;
+    min-width: 120px;
+    flex: 1;
+}
+
+.stat h3 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    color: #3B82F6;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Games Section */
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin: 3rem 0 2rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #3B82F6, transparent);
+}
+
+.featured-games {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 255, 136, 0.2);
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.game-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game-rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #3B82F6;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+}
+
+.game-info {
+    padding: 1.2rem;
+}
+
+.game-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.game-info p {
+    color: #aaa;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.game-platforms {
+    display: flex;
+    gap: 10px;
+    color: #3B82F6;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+/* News Section */
+.news-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.main-news {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 204, 255, 0.1));
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: #3B82F6;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.read-more {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.news-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border-left: 3px solid #3B82F6;
+}
+
+.news-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-item p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    margin-top: 4rem;
+    padding: 2rem 0 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+    color: #00ff88;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a:hover {
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.2);
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 100%;
+}
+
+.newsletter-form button {
+    background: #00ff88;
+    color: #000;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #00cc6a;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+
+/* Responsive Design */
+
+/* Tablet & Desktop - Above 768px */
+@media (min-width: 768px) {
+    .nav-container {
+        padding: 0 2rem;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .hero {
+        padding: 7rem 2rem 2rem;
+    }
+    
+    .hero-content p {
+        margin-left: 0;
+    }
+    
+    .news-container {
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .hero-buttons {
+        flex-wrap: nowrap;
+    }
+    
+    .featured-games, .news-section {
+        padding: 0 2rem;
+    }
+    
+    .footer-content {
+        padding: 0 2rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .newsletter-form input {
+        border-radius: 25px 0 0 25px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 0 25px 25px 0;
+        width: auto;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Small Desktop - Above 1024px */
+@media (min-width: 1024px) {
+    .nav-menu {
+        gap: 2rem;
+    }
+    
+    .nav-menu a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .hero-content h1 {
+        letter-spacing: 2px;
+    }
+    
+    .games-grid {
+        gap: 2rem;
+    }
+    
+    .game-image {
+        height: 200px;
+    }
+}
+
+/* Mobile Menu */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        padding: 2rem;
+        gap: 2rem;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .login-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .hero-content p {
+        margin-left: 0;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+    }
+    
+    .stat {
+        min-width: 100px;
+    }
+    
+    .game-card {
+        max-width: 100%;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Small Mobile - Below 480px */
+@media (max-width: 480px) {
+    .hero {
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .stat h3 {
+        font-size: 1.8rem;
+    }
+    
+    .stat p {
+        font-size: 0.8rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-image {
+        height: 160px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 25px !important;
+    }
+}
+
+/* Large Desktop - Above 1200px */
+@media (min-width: 1200px) {
+    .nav-container,
+    .hero-content,
+    .featured-games,
+    .news-section,
+    .footer-content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .game-card:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+    }
+    
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .login-btn:hover {
+        transform: none;
+    }
+    
+    .social-icons a:hover {
+        transform: none;
+    }
+    
+    .newsletter-form button:hover {
+        transform: none;
+    }
+    
+    /* Add active states for touch feedback */
+    .game-card:active {
+        transform: scale(0.98);
+    }
+    
+    .btn-primary:active,
+    .btn-secondary:active,
+    .login-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 120vh;
+        padding-top: 5rem;
+    }
+    
+    .nav-menu {
+        height: 100vh;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+    
+    .hero-buttons {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-stats {
+        margin-top: 1.5rem;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo i,
+    .social-icons a {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
